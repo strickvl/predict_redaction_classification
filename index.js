@@ -94,12 +94,12 @@ function onFileSelected(event) {
         // show the prediction
         predictionEl.innerHTML = `🎉 <u>Prediction: ${label}</u> 🎉`;
         confidencesEl.innerHTML = `Confidence:<br>
-                                          ${firstLabel}: ${firstLabelConfidence.toFixed(
-          3
-        )}<br>
-                                          ${secondLabel}: ${secondLabelConfidence.toFixed(
-          3
-        )}`;
+                                          ${firstLabel}: ${(
+          firstLabelConfidence * 100
+        ).toFixed(3)}<br>
+                                          ${secondLabel}: ${(
+          secondLabelConfidence * 100
+        ).toFixed(3)}`;
         errorEl.innerHTML = "";
         return;
       });
